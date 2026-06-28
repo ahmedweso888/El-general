@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الجنرال خالد هاشم | El general</title>
+    <title>الجنرال خالد هاشم | منصة التاريخ والجغرافيا</title>
     
     <!-- خطوط جوجل -->
     <link href="https://googleapis.com" rel="stylesheet">
@@ -386,20 +386,61 @@
 </head>
 <body>
 
-    <!-- الافتتاحية التفاعلية 3D للجنرال -->
-    <div id="intro-overlay">
-        <div class="svg-container">
+ <!-- الافتتاحية التفاعلية للجنرال - المخطوطة اليدوية المطابقة للرسمة --> 
+<div id="intro-overlay" style="background-color: #0b0b0b; padding: 50px; text-align: center; font-family: sans-serif;"> 
+    <div class="svg-container" style="max-width: 600px; margin: 0 auto;"> 
+        
+        <!-- ضبط أبعاد viewBox والميلان والتنعيم الفائق للخطوط -->
+        <svg viewBox="0 0 650 220" width="100%" height="100%" 
+             style="fill: none; stroke: #e1b16a; stroke-linecap: round; stroke-linejoin: round; transform: skewX(-12deg); filter: drop-shadow(0px 0px 6px rgba(225,177,106,0.5));"> 
             
-            <svg viewBox="0 0 450 150" width="100%" height="100%">
-                <path d="M 380,20 L 380,110" /><path d="M 350,20 L 350,105 L 310,105" />
-                <path d="M 320,60 C 290,55 270,75 290,95 L 260,95" /><path d="M 260,95 L 230,95 C 210,95 200,75 220,60" />
-                <path d="M 190,95 C 170,110 150,125 130,125" /><path d="M 120,20 L 120,105" /><path d="M 80,20 L 80,105 C 80,135 30,135 40,100" />
-                <path d="M 285,120 A 4,4 0 1,1 284.9,120" stroke-width="6" /><path d="M 222,45 A 4,4 0 1,1 221.9,45" stroke-width="6" />
-            </svg>
-        </div>
-        <div class="intro-sub">El General Khaled Hashem</div>
-        <button class="skip-btn" onclick="closeIntro()">المتابعة إلى المنصة 🏛️</button>
-    </div>
+            <!-- سمك خط تخين جداً، ناعم ومكتنز تماماً (stroke-width="18") -->
+            <g stroke-width="18">
+                <!-- 1. الألف الأولى (أقصى اليمين) -->
+                <path d="M 590,140 L 590,190" />
+                
+                <!-- 2. اللام الصاعدة والملتحمة مباشرة من الأسفل ببداية الجيم دون التفاف علوي -->
+                <path d="M 540,40 L 540,120 C 540,135 480,135 410,135" />
+                
+                <!-- 3. جسم الجيم والسحبة الأفقية المستقيمة الممتدة إلى النون -->
+                <path d="M 410,135 C 440,165 520,165 470,165 L 340,165" />
+                
+                <!-- 4. سنّة النون المرتفعة ثم الهابطة لتتصل بالراء -->
+                <path d="M 340,165 C 320,165 315,125 310,120 C 305,125 295,165 270,185" /> 
+                
+                <!-- 5. الراء الممتدة والمقوسة من الأسفل بنعومة فائقة -->
+                <path d="M 270,185 C 240,205 170,210 170,195" />
+                
+                <!-- 6. الألف الثانية المستقيمة المرتفعة -->
+                <path d="M 215,30 L 215,160" />
+                
+                <!-- 7. اللام الأخيرة الصاعدة ثم الهابطة لتلتف بالعقدة الدائرية الواضحة جهة اليسار -->
+                <path d="M 160,25 L 160,130 C 140,165 75,175 75,130 C 75,90 120,95 130,115 C 140,135 110,155 40,115" /> 
+            </g>
+            
+            <!-- نقاط الحروف الدائرية السميكة والموزعة بدقة حسب رسمتك -->
+            <g stroke-width="22" stroke="#e1b16a">
+                <!-- نقطة الجيم (أسفل انحناء الحرف) -->
+                <path d="M 440,200 A 0.1,0.1 0 1,1 439.9,200" />
+                <!-- نقطة النون (فوق سنّة الحرف مباشرة) -->
+                <path d="M 312,80 A 0.1,0.1 0 1,1 311.9,80" /> 
+                <!-- النقطة التزيينية الإضافية أعلى اللام الأولى -->
+                <path d="M 540,40 A 0.1,0.1 0 1,1 539.9,40" />
+            </g>
+        </svg> 
+    </div> 
+    
+    <!-- الاسم السفلي العريض والمائل -->
+    <div class="intro-sub" style="font-weight: bold; font-style: italic; font-size: 1.3rem; color: #a5a5a5; margin-top: 35px; letter-spacing: 1px;">
+        El General Khaled Hashem
+    </div> 
+    
+    <!-- زر المتابعة إلى المنصة -->
+    <button class="skip-btn" onclick="closeIntro()" style="background-color: #d1a153; color: #111; border: none; padding: 12px 42px; font-size: 1.1rem; font-weight: bold; border-radius: 25px; margin-top: 35px; cursor: pointer; box-shadow: 0 0 15px rgba(209,161,83,0.4);">
+        المتابعة إلى المنصة 🏛️
+    </button> 
+</div>
+
 
     <!-- 🟢 الصفحة الأولى للمنصة -->
     <section class="page-section">
